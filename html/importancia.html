@@ -12,9 +12,10 @@
 <body>
     <header>
         <a href="home.html" tabindex="0">
-            <img src="../assets/logo-programao-inclusiva.png" alt="Logo Programação Inclusiva" tabindex="0">
+            <img src="../assets/logo-programao-inclusiva.png" alt="Logo Programação Inclusiva">
+            <figcaption tabindex="0">Imagem: Logo do Site</figcaption>
         </a>
-        <nav class="header-links" role="navigation" aria-label="Menu principal" tabindex="0">
+        <nav class="header-links" role="navigation" aria-label="Menu principal">
             <ul class="header-titulos">
                 <li tabindex="0"><a href="index.html" tabindex="0">Home</a></li>
                 <li tabindex="0"><a href="barreiras.html" tabindex="0">Barreiras</a></li>
@@ -25,7 +26,7 @@
         </nav>
         <div class="accessibility-buttons">
             <button id="contrast-toggle" data-state="normal" aria-label="Ativar alto contraste">Alto Contraste</button>
-            <button id="screen-reader-toggle" aria-label="Ativar leitor de tela">Ler Página</button>
+            <button id="screen-reader-toggle" aria-label="Ativar leitor de tela">Ler Página Inteira</button>
         </div>
         <div class="font-control-buttons">
             <button id="increase-font" aria-label="Aumentar o tamanho da fonte">A+</button>
@@ -35,7 +36,7 @@
     <main>
         <section class="section-container">
             <article>
-                    <h1 tabindex="0">Importância da Acessibilidade</h1>
+                <h1 tabindex="0">Importância da Acessibilidade</h1>
                 <p tabindex="0">A acessibilidade digital é um pilar fundamental para construir uma sociedade mais justa e inclusiva. Ela garante que todas as pessoas, independentemente de suas habilidades ou limitações, possam acessar e utilizar recursos tecnológicos com autonomia e igualdade.</p>
                 <p tabindex="0">Na web, a acessibilidade não é apenas uma questão técnica, mas também um direito humano, reconhecido em legislações e diretrizes globais, como as WCAG (Diretrizes de Acessibilidade para Conteúdo Web). Além de promover a inclusão, a acessibilidade beneficia toda a sociedade, ampliando o alcance e impacto dos conteúdos digitais.</p>
                 <button class="read-section" aria-label="Ler esta seção">Ler Seção</button>
@@ -44,9 +45,7 @@
         <section class="section-container">
             <div class="content-container">
                 <article class="text-side">
-
-                        <h2 tabindex="0">Benefícios da Acessibilidade Digital</h2>
-
+                    <h2 tabindex="0">Benefícios da Acessibilidade Digital</h2>
                     <p tabindex="0">A acessibilidade digital traz vantagens que vão além de incluir pessoas com deficiência. Ela melhora a experiência de todos os usuários e oferece benefícios tangíveis para empresas e organizações:</p>
                     <ul>
                         <li tabindex="0"><strong>Alcance Ampliado:</strong> Torna sites e aplicativos acessíveis para um público maior, incluindo idosos e usuários com limitações temporárias.</li>
@@ -64,7 +63,7 @@
         </section>
         <section class="section-container">
             <article>
-                    <h2 tabindex="0">Acessibilidade como Direito Humano</h2>
+                <h2 tabindex="0">Acessibilidade como Direito Humano</h2>
                 <p tabindex="0">A acessibilidade digital é um direito fundamental garantido por tratados internacionais, como a Convenção sobre os Direitos das Pessoas com Deficiência (ONU). Esses tratados estabelecem que a web deve ser projetada para incluir todos, eliminando barreiras que possam limitar a participação social.</p>
                 <p tabindex="0">No Brasil, a <strong>Lei Brasileira de Inclusão (LBI)</strong> reforça a necessidade de acessibilidade em serviços digitais, promovendo igualdade de oportunidades e autonomia para pessoas com deficiência.</p>
                 <button class="read-section" aria-label="Ler esta seção">Ler Seção</button>
@@ -77,9 +76,7 @@
                     <figcaption tabindex="0">Imagem: Homem com deficiência visual mexendo no computador.</figcaption>
                 </figure>
                 <article class="text-side">
-
-                        <h2 tabindex="0">Exemplos de Acessibilidade na Prática</h2>
-
+                    <h2 tabindex="0">Exemplos de Acessibilidade na Prática</h2>
                     <p tabindex="0">A implementação de acessibilidade pode ser vista em diversos contextos, como:</p>
                     <ul>
                         <li tabindex="0"><strong>Educação:</strong> Plataformas de ensino acessíveis permitem que estudantes com deficiência participem plenamente das aulas, utilizando leitores de tela ou legendas em vídeos.</li>
@@ -105,7 +102,7 @@
                         <li tabindex="0"><a href="barreiras.html" tabindex="0">Barreiras</a></li>
                         <li tabindex="0"><a href="importancia.html" tabindex="0">Importância</a></li>
                         <li tabindex="0"><a href="recursos.html" tabindex="0">Recursos</a></li>
-                        <li tabindex="0"><a href="tecnologias.html" tabindex="0">tecnologias</a></li>
+                        <li tabindex="0"><a href="tecnologias.html" tabindex="0">Tecnologias</a></li>
                     </ul>
                 </article>
                 <article class="footer-coluna">
@@ -120,14 +117,17 @@
             </aside>
         </section>
     </footer>
+    
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
+          <div class="vw-plugin-top-wrapper"></div>
         </div>
-    </div>
+      </div>
     <script src="../js/acessibilidades.js"></script>
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 </html>
