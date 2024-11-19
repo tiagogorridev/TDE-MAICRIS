@@ -1,7 +1,7 @@
+//CONTRASTE
+
 const contrastToggle = document.getElementById('contrast-toggle');
 const body = document.body;
-
-// Alterna o modo de alto contraste
 contrastToggle.addEventListener('click', () => {
     const state = contrastToggle.getAttribute('data-state');
     if (state === 'normal') {
@@ -17,11 +17,10 @@ contrastToggle.addEventListener('click', () => {
     }
 });
 
-// Botões de controle de fonte
+//TAMANHO FONTE
 const increaseFontBtn = document.getElementById('increase-font');
 const decreaseFontBtn = document.getElementById('decrease-font');
 
-// Define limites de tamanho
 const adjustFontSize = (adjustment) => {
     const elements = document.querySelectorAll('body *:not(svg):not(img)');
     elements.forEach(element => {
@@ -34,14 +33,12 @@ const adjustFontSize = (adjustment) => {
     });
 };
 
-// Incrementa ou decrementa o tamanho da fonte
 increaseFontBtn.addEventListener('click', () => adjustFontSize(1));
 decreaseFontBtn.addEventListener('click', () => adjustFontSize(-1));
 
-// Referência ao botão "Ler Página"
+//LER PAGINA INTEIRA
 const screenReaderButton = document.getElementById("screen-reader-toggle");
 
-// Função para ler o conteúdo da página
 const readPageContent = () => {
     const content = document.body.innerText; // Captura todo o texto visível no corpo da página
     const utterance = new SpeechSynthesisUtterance(content); // Cria uma instância de leitura
@@ -53,7 +50,6 @@ const readPageContent = () => {
     speechSynthesis.speak(utterance); // Inicia a leitura
 };
 
-// Adiciona o evento de clique ao botão
 screenReaderButton.addEventListener("click", () => {
     if (speechSynthesis.speaking) {
         speechSynthesis.cancel();
@@ -66,7 +62,7 @@ screenReaderButton.addEventListener("click", () => {
     }
 });
 
-// Função para ler texto
+//LER TEXTO
 const readText = (text, button) => {
     if (speechSynthesis.speaking) {
         speechSynthesis.cancel();
@@ -85,27 +81,20 @@ const readText = (text, button) => {
     }
 };
 
-// Adiciona eventos aos botões de leitura de seção
 document.querySelectorAll('.read-section').forEach((button) => {
     button.addEventListener('click', () => {
-        const section = button.closest('.section-container'); // Seleciona o container da seção
-        let content = ''; // Armazena o texto a ser lido
-
-        // Adiciona o conteúdo do título e dos parágrafos da seção
+        const section = button.closest('.section-container');
+        let content = '';
         const header = section.querySelector('h1, h2');
         if (header) content += header.textContent + '. ';
-
         const paragraphs = section.querySelectorAll('p');
         paragraphs.forEach((p) => {
             content += p.textContent + ' ';
         });
-
-        // Adiciona o conteúdo do figcaption, caso exista
         const figcaption = section.querySelector('figcaption');
         if (figcaption) {
             content += 'Descrição da imagem: ' + figcaption.textContent + '. ';
         }
-
-        readText(content, button); // Lê o conteúdo completo
+        readText(content, button);
     });
 });
